@@ -66,3 +66,54 @@ function abbrevName(name) {
 function litres(time) {
     return Math.floor(time * 0.5);
 }
+
+
+7   // https://www.codewars.com/kata/5784c89be5553370e000061b/train/javascript
+
+function maxProduct(numbers) {
+    let max1 = -Infinity;
+    let max2 = -Infinity;
+  
+    for (let num of numbers) {
+      if (num > max1) {
+        max2 = max1;
+        max1 = num;
+      } else if (num > max2) {
+        max2 = num;
+      }
+    }
+  
+    return max1 * max2;
+  }
+  
+  
+8   // https://www.codewars.com/kata/53af2b8861023f1d88000832/train/javascript
+
+function areYouPlayingBanjo(name) {
+    if (name[0].toLowerCase() === 'r') {
+      return name + " plays banjo";
+    } else {
+      return name + " does not play banjo";
+    }
+  }
+
+9    //   https://www.codewars.com/kata/54b42f9314d9229fd6000d9c/train/javascript
+
+function duplicateEncode(word) {
+
+    const lower = word.toLowerCase();
+  
+  
+    const counts = {};
+    for (let ch of lower) {
+      counts[ch] = (counts[ch] || 0) + 1;
+    }
+  
+  
+    let result = "";
+    for (let ch of lower) {
+      result += counts[ch] === 1 ? "(" : ")";
+    }
+    
+    return result;
+  }
