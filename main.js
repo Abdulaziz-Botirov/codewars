@@ -124,8 +124,6 @@ function duplicateEncode(word) {
 function isOrthogonal(a, b) {
 
   if (a.length !== b.length) return false;
-
-
   let dot = 0;
   for (let i = 0; i < a.length; i++) {
     dot += a[i] * b[i];
@@ -144,11 +142,11 @@ function arrayDiff(a, b) {
 
 function reverseWords(str) {
   return str
-    .split(" ")               
-    .map(word => 
-      word.split("").reverse().join("") 
+    .split(" ")
+    .map(word =>
+      word.split("").reverse().join("")
     )
-    .join(" ");              
+    .join(" ");
 }
 
 13 // https://www.codewars.com/kata/5265326f5fda8eb1160004c8/train/javascript
@@ -166,9 +164,3 @@ function spinWords(str) {
 function numberToString(num) {
   return num.toString();
 }
-
-14
-
-
-15
-
