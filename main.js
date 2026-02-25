@@ -164,3 +164,25 @@ function spinWords(str) {
 function numberToString(num) {
   return num.toString();
 }
+
+14 // https://www.codewars.com/kata/5af15a37de4c7f223e00012d/train/javascript
+
+function menFromBoys(arr) {
+  const uniq = [...new Set(arr)];
+
+  const evens = uniq
+    .filter(x => x % 2 === 0)
+    .sort((a, b) => a - b);
+
+  const odds = uniq
+    .filter(x => Math.abs(x % 2) === 1) 
+    .sort((a, b) => b - a);
+
+  return evens.concat(odds);
+}
+
+15 // https://www.codewars.com/kata/551b4501ac0447318f0009cd/train/javascript
+
+function booleanToString(b){
+  return b + "";
+}
